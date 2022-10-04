@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* utility class start */
+
+.button-blue-light{
+  color :#052bb7;
+  background-color: #052cb72f;
+  border: 1px solid #052bb7;
+  cursor: pointer;
+  border-radius: 25px;
+
+}
+.button-blue-light:hover{
+    color: white;
+}
+
+
+
+
+/* utility class end */
+
+
+/* top navbar start */
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 9vh;
+    border-bottom:1px solid  rgb(209, 213, 219);    
+}  
+
+
+.navbar .items1{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar .items2{
+    width : 25%;
+    display : flex;
+    flex-direction: row ;
+    justify-content: space-evenly;
+
+}
+
+.navbar h2{
+    margin-top: 7px;
+    font-weight: 400;
+    padding: 5px;
+    color: #052cb7cf;
+}
+
+
+.navbar .logo {
+    width: 45px;
+    height: 45px;
+    margin : 4px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.navbar .profile {
+    width: 45px;
+    border: 1px solid #052cb766;
+    height: 45px;
+    margin : 4px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+
+
+/* top navbar end */
+
+
+/* main home start that contains sidebar or main */
+
+.home{
+    display: flex;
+    /* top : 9vh; */
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+/* main home end */
+
+/* main segment start */
+
+.main{
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;  
+    background-color: rgba(243,242,242,255);
+    
+}
+
+
+/* main segment end */
+
+/* sidebar start  */
+
+
+.sidebar{
+    color : white;
+    background-color: white;
+    position: fixed;
+    top : 0;
+    left: 0;
+    margin-top: 9vh;
+    height: 100%;
+    width: 5%;
+    border-right:1px solid  rgb(209, 213, 219);
+    
+    
+}
+.sidebar-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    width: 100%;
+}
+
+.sidebar-items a{
+    color :rgba(154, 154, 154, 0.611)
+}
+
+
+.sidebar-items .active{
+    display: inline-block;
+    padding: 12px;
+    width: 100%;
+    color : #052bb7;
+    background-color: #052cb711;
+    height: 10vh;
+    border-left:3px solid #052bb7; 
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+/* sidebar end */
+
+
+/* learn part in main */
+
+.nav{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.second-nav li{
+    color : black;
+    display: inline-block;
+    list-style: none;
+}
+
+.second-nav a{
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+
+
+.second-nav a.active{
+ 
+    display: inline-block;
+    padding: 12px;
+    width: 100%;
+    color : #052bb7;
+    background-color: #052cb711;
+    border-bottom:3px solid #052bb7; 
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+
+.article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 60%;
+
+}
+
+
+
+.article .card{
+    height : 35%;
+    width: 30%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;    
+}
+
+
+.question{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+}
+
+
+.question input {
+    width: 60%;
+    height: 80%;
+    font-size: large;
+}
+
+.question button{
+    margin-left: 15px;
+    height: 80%;
+    width: 10%;
+    font-size: 28px;
+}
+
+/* end of learn part in main */
