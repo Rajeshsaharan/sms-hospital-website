@@ -4,6 +4,7 @@
   "description": "\"all api for sms_hospital app\"",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
