@@ -3,7 +3,7 @@ services:
   api:
     container_name: api-container
     restart: always
-    build: ./server
+    build: ./backend
     ports: 
       - "8081:8081"
     depends_on: 
@@ -11,7 +11,7 @@ services:
   client:
     container_name: client-container
     restart: always
-    build: ./client
+    build: ./frontend
     ports: 
       - "8080:8080"
     depends_on: 
