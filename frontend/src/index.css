@@ -1,252 +1,229 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+    /* 10px */
     font-family: 'Rubik', sans-serif;
+    ;
 }
 
-/* utility class start */
+/* utility class  start */
 
-.button-blue-light{
-  color :#052bb7;
-  background-color: #052cb72f;
-  border: 1px solid #052bb7;
-  cursor: pointer;
-  border-radius: 25px;
-
-}
-.button-blue-light:hover{
-    color: white;
-}
-
-
-
-
-/* utility class end */
-
-
-/* top navbar start */
-
-.navbar{
-    width: 100%;
-    position: sticky;
-    background-color: rgb(255, 255, 255);
-    top: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 9vh;
-    border-bottom:1px solid  rgb(209, 213, 219);    
-}  
-
-
-.navbar .items1{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.navbar .items2{
-    width : 25%;
-    display : flex;
-    flex-direction: row ;
-    justify-content: space-evenly;
-
-}
-
-.navbar h2{
-    margin-top: 7px;
-    font-weight: 400;
-    padding: 5px;
-    color: #052cb7cf;
-}
-
-
-.navbar .logo {
-    width: 45px;
-    height: 45px;
-    margin : 4px;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.navbar .profile {
-    width: 45px;
-    border: 1px solid #052cb766;
-    height: 45px;
-    margin : 4px;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-
-
-
-/* top navbar end */
-
-
-/* main home start that contains sidebar or main */
-
-.home{
-    display: flex;
-    /* top : 9vh; */
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-}
-
-
-
-
-/* main home end */
-
-/* main segment start */
-
-.main{
-    width: 100%;
-    height: 100%;
-    padding-left: 5%;  
-    background-color: rgba(243,242,242,255);
-    
-}
-
-
-/* main segment end */
-
-/* sidebar start  */
-
-
-.sidebar{
+.button-blue{
     color : white;
-    background-color: white;
-    position: fixed;
-    top : 0;
-    left: 0;
-    margin-top: 9vh;
-    height: 100%;
-    width: 5%;
-    border-right:1px solid  rgb(209, 213, 219);
-    
-    
+    background-color: #3a34f8;
+    border: none;
+    cursor: pointer;
 }
-.sidebar-item{
+
+/* utility class end  */
+
+
+/* login page start  */
+
+.login-page{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    font-size: 25px;
-    height: 100%;
-    width: 100%;
-}
-
-.sidebar-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 50%;
-    width: 100%;
-}
-
-.sidebar-items a{
-    color :rgba(154, 154, 154, 0.611)
-}
-
-
-.sidebar-items .active{
-    display: inline-block;
-    padding: 12px;
-    width: 100%;
-    color : #052bb7;
-    background-color: #052cb711;
-    height: 10vh;
-    border-left:3px solid #052bb7; 
-    text-decoration: none;
-    font-weight: bold;
-
-}
-
-
-/* sidebar end */
-
-
-/* learn part in main */
-
-.nav{
-    width: 100%;
-    border-bottom: 1px solid black;
-}
-
-.second-nav li{
-    color : black;
-    display: inline-block;
-    list-style: none;
-}
-
-.second-nav a{
-    color: black;
-    padding: 20px;
-    margin: 10px;
-    text-decoration: none;
-}
-
-
-
-.second-nav a.active{
- 
-    display: inline-block;
-    padding: 12px;
-    width: 100%;
-    color : #052bb7;
-    background-color: #052cb711;
-    border-bottom:3px solid #052bb7; 
-    text-decoration: none;
-    font-weight: bold;
-
-}
-
-
-
-.article{
-    display: flex;
-    flex-direction: row;
+    font-size: 5rem;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 60%;
-
+    height: 98vh;
 }
 
 
 
-.article .card{
-    height : 35%;
-    width: 30%;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;    
-}
 
-
-.question{
+.col-1{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: 10vh;
+    background-color: #3a34f8;
+    color: white;
+    border-radius: 0.15em;
+    margin: 0.2em;
+    align-items: center;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.col-1 > *{
+    margin: .5em;
+}
+
+.col-1 .logo{
+    
+    width: 5em;
+    height: 5em;
+    object-fit: contain;
+}
+
+
+
+.col-2{
+    margin: 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-
-.question input {
-    width: 60%;
-    height: 80%;
-    font-size: large;
+.col-2 > *{
+    margin: 0.5em;
 }
 
-.question button{
-    margin-left: 15px;
-    height: 80%;
-    width: 10%;
-    font-size: 28px;
+.col-2 h1{
+    font-weight: 400;
+    font-size: 5rem;
 }
 
-/* end of learn part in main */
+
+.col-2 .phone{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    
+
+    
+}
+
+.col-2 .phone input{
+    border : 3px solid #3a34f8;
+    font-size: 2rem;
+    padding-left: 3em;
+    border-radius: 00.5em;
+}
+
+.col-2 .phone button{
+    margin-left: 0.4em;
+    border-radius: 0.5em;
+    
+}
+
+
+.col-2 span{
+    position: absolute;
+    top : .60em;
+    z-index: 2;
+    font-size: 2rem;
+    color : #3a34f8;
+    left : 1em;
+}
+
+
+.col-2 .otp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.col-2 .otp input{
+    border: 3px solid #3a34f8;
+    border-radius: 0.5em;
+    font-size: 2rem;
+    padding-left: 0.2em;
+}
+
+.col-2 .otp button{
+    border-radius: 0.5em;
+}
+
+
+
+/* media query start  important  */
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+    .col-1{
+        height: 40%;
+        width: 100%;
+    
+
+    }
+    .col-2{
+        height: 65%;
+        width: 100%;
+
+    }
+    .col-2 .phone{
+        width: 100%;
+        height: 2.5em;
+    }
+    .col-2 .phone input{
+        width: 80%;
+    }
+    .col-2 .phone button{
+        width: 15%;
+    }
+    .col-2 .otp{
+        width: 100%;
+        height: 6em;
+        
+    }
+    .col-2 .otp input{
+        width: 100%;
+        height: 40%;
+
+    }
+    .col-2 .otp button{
+        width: 15%;
+        height: 40%;
+    }
+
+
+
+}
+
+/* Media Query for low resolution Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 1281px) {
+
+    .col-1{
+        width: 30%;
+        height: 100%;
+       
+    }
+    .col-2{
+        height: 100%;
+        width: 65%;
+    }
+    .col-2 .phone{
+        width: 70%;
+        height: 2.5em;
+    }
+    .col-2 .phone input{
+        width: 80%;
+    }
+    .col-2 .phone button{
+        width: 15%;
+    }
+    .col-2 .otp{
+        width: 70%;
+        height: 6em;
+        
+    }
+    .col-2 .otp input{
+        width: 100%;
+        height: 40%;
+
+    }
+    .col-2 .otp button{
+        width: 15%;
+        height: 40%;
+    }
+
+
+    
+  
+}
+
+
+
+
+
+
+
+
+
+
+/* media query end  */

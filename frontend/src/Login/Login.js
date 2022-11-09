@@ -1,31 +1,30 @@
 import React, { useState } from 'react'
-import '../Login/login.css'
 import headers from './headers'
 import VerifyOTP from './VerifyOTP'
+import logo from '../asset/logo.gif'
 
 function Login() {
     const [phoneNumber, setPhoneNumber] = useState("")
     const [fullHash, setFullHash] = useState("")
     const [token, setToken] = useState("")
-    const [isloading, setLoading] = useState(false)
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
 
 
-    const phoneNumberHandler = (e)=>{
-      const val = e.target.value;
-      if (e.target.validity.valid){
-        setPhoneNumber(e.target.value);}
-        else if (val === '' || val === '-'){
+    const phoneNumberHandler = (e) => {
+        const val = e.target.value;
+        if (e.target.validity.valid) {
+            setPhoneNumber(e.target.value);
+        }
+        else if (val === '' || val === '-') {
             setPhoneNumber(val)
-    } 
-  }
+        }
+    }
 
 
 
     const submitHandler = async (e) => {
         e.preventDefault()
-        // setShow(true)
-        setLoading(true)
+        setShow(true)
         const data = await fetch('http://localhost:7000/login', {
             method: 'POST',
             body: JSON.stringify({
@@ -37,37 +36,48 @@ function Login() {
         console.log(realData)
         setFullHash(realData.fullHash)
         setToken(realData.token)
-        setPhoneNumber(realData.user.phoneNumber)
-        setLoading(false)
-       
+
     }
 
 
     return (
-        <div className='login'>
+        <div className='login-page'>
 
-            <div className='left'>
-                <h1>Hello sms medical college</h1>
-            </div>
 
-            <div className='right'>
-                <div>
-                    <h1>Explore The Medical Study</h1>
-                </div>
-                <div> <form className='align-item' onSubmit={submitHandler}>
-                    <span>+91</span>
-                    <input type="tel" max={10} value={phoneNumber} pattern="^-?[0-9]\d*\.?\d*$" onChange={phoneNumberHandler} required></input>
-                    <button type='submit'>Get OTP</button>
-                </form>
+
+
+            <div className='col col-1'>
+                
+                <img className='logo' src={logo} alt="logo"></img>
+                <h1>Start Your Journey with Us</h1>
+                <text>Explore The SMS Medical College's Best Community Of Doctors and Students.</text>
+                
+                
                 </div>
 
-            
+           
+
+
+            <div className='col col-2'>
+                    
+                    <h1>Hi, Welcome Back</h1>
+                    <form className = "phone" onSubmit={submitHandler}>
+                        <span class="unit">+91</span>
+                        
+                        <input  placeholder='Please type your Number here' type="tel" max={10} value={phoneNumber} pattern="^-?[0-9]\d*\.?\d*$" onChange={phoneNumberHandler} required></input>
+                        <button className='button-blue' type='submit'>Get OTP</button>
+                    </form>
+
+                   
+
                     {
-                        show ? <div><VerifyOTP fullHash={fullHash} token={token} phoneNumber={phoneNumber} /> </div>
-                        : ""
+                        show ? <VerifyOTP fullHash={fullHash} token={token} phoneNumber={phoneNumber} /> 
+                            : ""
                     }
 
-        
+                 
+
+
 
 
             </div>

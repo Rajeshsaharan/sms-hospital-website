@@ -30,7 +30,7 @@ function Article(props) {
      
      <div className='article'>
       {
-      articleslist.slice(0, 6)
+      articleslist
       }
       
       </div>

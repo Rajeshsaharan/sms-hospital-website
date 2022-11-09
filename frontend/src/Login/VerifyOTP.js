@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {connect, useSelector} from "react-redux"
 import {FetchUser} from '../Redux/User/UserActions'
-import "../Login/login.css"
 
 
 
@@ -37,11 +36,11 @@ function VerifyOTP(props) {
     return (<>
         
         <>
-        <form className='align' onSubmit={submitHandler}>
+        <form className='otp' onSubmit={submitHandler}>
         
         <input type = "text" placeholder={`please enter your otp sented to ${phoneNumber}`} max={4} value={otp} onChange={(e)=>setOTP(e.target.value)}></input>
    
-        <button type='submit'>Login</button>
+        <button className='button-blue' type='submit'>Login</button>
         </form>
         </>
         

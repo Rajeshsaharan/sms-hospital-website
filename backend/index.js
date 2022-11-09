@@ -42,11 +42,14 @@ const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_KE
 
 const User = require('./model/User')
 const Article = require('./model/Article')
-
+const Ward = require('./model/Ward')
+const Bed = require('./model/Beds')
 
 //importing chechkauth
 
 const checkAuth = require("./middleware/auth")
+const { request } = require("http")
+const { response } = require("express")
 
 
 //app logic
@@ -143,12 +146,39 @@ app.post('/update-profile', upload.single('image'), async (request, response, ne
 });
 
 
+app.get('/wards', async(request,response)=>{
+    const wards = await Ward.find({})
+    response.send(wards)
+})
+
+app.post ("/create-wards", async(request, response)=>{
+    const {ward_name ,ward_details , numberofBeds} = request.body
+    console.log(numberofBeds)
+    const NewWard = await new Ward({ward_name , ward_details})
+    for(let i = 1; i <= numberofBeds ; i++){
+        console.log(i)
+        const newBed = await new Bed({BedId : i}).save()
+        console.log(newBed._id)
+        NewWard.bed.push(newBed._id)
+
+    }
+    NewWard.save()
+    response.send(NewWard)
+}
+)
+
+
+
+
 app.get("/articles", async(request, response)=>{
     const articles = await Article.find({})
     console.log(articles)
     response.send(articles)
     
 })
+
+
+
 
 app.post("/create-article", async(request, response)=>{
     const article = await new Article({title : "hello world"}).save()

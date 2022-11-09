@@ -1,6 +1,6 @@
 const appState = {
     isloading : false,
-    isAuth : true,
+    isAuth : false,
     user : {
         username : "rajeshJsaharan",
         profilePicUrl : "https://eu.ui-avatars.com/api/?name=John+Doe&size=250"
